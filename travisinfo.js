@@ -32,6 +32,9 @@ module.exports = function() {
       });
   }
 
+  var cpuinfo = fs.readFileSync('/proc/cpuinfo', 'utf8');
+  console.log(cpuinfo);
+
   return info;
 };
 
