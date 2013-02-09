@@ -1,2 +1,3 @@
 var travisinfo = require('./travisinfo');
-console.dir(travisinfo());
+var util = require('util');
+console.log(util.inspect(travisinfo(), true, null, true));
