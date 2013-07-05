@@ -9,5 +9,5 @@ notifications:
     - jrgm@mozilla.com
 
 before_script:
-  - "mysql -NBe 'select version()'"
-  - "phantomjs --version"
+  - "echo `mysql -NBe 'select version()'`"
+  - "echo `phantomjs --version`"
