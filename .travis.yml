@@ -9,5 +9,7 @@ notifications:
     - jrgm@mozilla.com
 
 before_script:
-  - "mysql -NBe 'select version()'"
-  - "phantomjs --version"
+ - "uname -a"
+ - "[ -e /etc/lsb-release ] && cat /etc/lsb-release"
+ - "phantomjs --version"
+ - "mysql -NBe 'select version()'"
