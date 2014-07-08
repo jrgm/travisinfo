@@ -18,4 +18,7 @@ cat /etc/mysql/my.cnf
 sed -i'' 's/table_cache/table_open_cache/' /etc/mysql/my.cnf
 sed -i'' 's/log_slow_queries/slow_query_log/' /etc/mysql/my.cnf
 #sed -i'' 's/basedir[^=]\\+=.*$/basedir = \\/opt\\/mysql\\/server-5.6/' /etc/mysql/my.cnf
+
+ls -l /etc/init.d/mysql.server
+service mysql stop || true
 /etc/init.d/mysql.server start
