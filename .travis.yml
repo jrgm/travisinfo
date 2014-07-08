@@ -9,6 +9,7 @@ notifications:
 
 before_install:
   - sudo ls -la .
+  - sudo ./setup-mysql.sh
 
 before_script:
  - "uname -a"
