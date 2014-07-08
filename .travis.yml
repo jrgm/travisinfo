@@ -7,6 +7,13 @@ notifications:
   email:
     - jrgm@mozilla.com
 
+before_install:
+  - sudo apt-get purge -y mysql-server-5.5
+  - sudo apt-get autoremove -y
+  - echo "mysql-server mysql-server/root_password       select ''" | sudo debconf-set-selections
+  - echo "mysql-server mysql-server/root_password_again select ''" | sudo debconf-set-selections
+  - sudo apt-get install -y mysql-server-5.6
+
 before_script:
  - "uname -a"
  - "[ -e /etc/lsb-release ] && cat /etc/lsb-release"
