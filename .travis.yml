@@ -8,7 +8,7 @@ notifications:
     - jrgm@mozilla.com
 
 before_install:
-  - sudo ls -l ./scripts
+  - sudo ls -la .
 
 before_script:
  - "uname -a"
