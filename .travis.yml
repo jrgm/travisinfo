@@ -3,13 +3,15 @@ language: node_js
 node_js:
  - "0.10"
 
+sudo: false
+
 notifications:
   email:
     - jrgm@mozilla.com
 
 before_install:
   - sudo ls -la .
-  - sudo ./setup-mysql.sh
+#  - sudo ./setup-mysql.sh
 
 before_script:
  - "uname -a"
