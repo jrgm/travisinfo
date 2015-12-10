@@ -10,11 +10,11 @@ notifications:
     - jrgm@mozilla.com
 
 before_install:
-  - sudo ls -la .
+  - ls -la .
 #  - sudo ./setup-mysql.sh
 
 before_script:
  - "uname -a"
  - "[ -e /etc/lsb-release ] && cat /etc/lsb-release"
  - "phantomjs --version"
- - "mysql -NBe 'select version()'"
+# - "mysql -NBe 'select version()'"
