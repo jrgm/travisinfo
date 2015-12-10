@@ -11,10 +11,9 @@ notifications:
 
 before_install:
   - ls -la .
+  - uname -a
+  - cat /etc/lsb-release || echo 'no /etc/lsb-release'
+  - echo foo
+  - echo bar
+  - echo baz
 
-before_script:
- - uname -a
- - cat /etc/lsb-release || echo 'no /etc/lsb-release'
- - echo foo
- - echo bar
- - echo baz
