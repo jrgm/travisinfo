@@ -11,10 +11,7 @@ notifications:
 
 before_install:
   - ls -la .
-#  - sudo ./setup-mysql.sh
 
 before_script:
- - "uname -a"
- - "[ -e /etc/lsb-release ] && cat /etc/lsb-release"
- - "phantomjs --version"
-# - "mysql -NBe 'select version()'"
+ - uname -a
+ - cat /etc/lsb-release || echo 'no /etc/lsb-release'
