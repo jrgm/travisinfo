@@ -5,6 +5,13 @@ node_js:
 
 sudo: false
 
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+
 notifications:
   email:
     - jrgm@mozilla.com
@@ -15,9 +22,4 @@ before_install:
   - cat /etc/lsb-release || echo 'no /etc/lsb-release'
   - gcc --version || echo 'no gcc?'
   - g++ --version || echo 'no g++?'
-  - echo done
-  - echo done
-  - echo done
-  - echo done
-  - echo done
   - echo done
