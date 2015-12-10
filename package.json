@@ -3,12 +3,10 @@
   "description": "info about travis-ci instance",
   "homepage": "https://github.com/jrgm/travisinfo",
   "version": "0.0.1",
-  "repositories": [
-    {
-      "type": "git",
-      "url": "git://github.com/jrgm/travisinfo.git"
-    }
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jrgm/travisinfo.git"
+  },
   "maintainers": [
     {
       "name": "John Morrison",
