@@ -13,7 +13,12 @@ before_install:
   - ls -la .
   - uname -a
   - cat /etc/lsb-release || echo 'no /etc/lsb-release'
-  - gcc --version
-  - g++ --version
+  - gcc --version || echo 'no gcc?'
+  - g++ --version || echo 'no g++?'
+  - echo done
+  - echo done
+  - echo done
+  - echo done
+  - echo done
   - echo done
 
