@@ -25,9 +25,9 @@ before_install:
   - echo done
 
 install:
+  - env | sort
   - gcc --version || echo 'no gcc?'
   - g++ --version || echo 'no g++?'
-  - CXX=g++-4.8 gcc --version || echo 'no gcc?'
-  - CXX=g++-4.8 g++ --version || echo 'no g++?'
-  - npm install
+  # use c++-11 with node4, default compiler on downlevel versions
+  - if [ $TRAVIS_NODE_VERSION == "4" ]; then CXX=g++-4.8 npm install; else npm install; fi
 
