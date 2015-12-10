@@ -23,3 +23,11 @@ before_install:
   - gcc --version || echo 'no gcc?'
   - g++ --version || echo 'no g++?'
   - echo done
+
+install:
+  - gcc --version || echo 'no gcc?'
+  - g++ --version || echo 'no g++?'
+  - CXX=g++-4.8 gcc --version || echo 'no gcc?'
+  - CXX=g++-4.8 g++ --version || echo 'no g++?'
+  - npm install
+
