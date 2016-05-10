@@ -24,6 +24,7 @@ before_install:
   - cat /etc/lsb-release || echo 'no /etc/lsb-release'
   - gcc --version || echo 'no gcc?'
   - g++ --version || echo 'no g++?'
+  - mysql -uroot -e 'show variables like "version"'
   - echo done
 
 install:
